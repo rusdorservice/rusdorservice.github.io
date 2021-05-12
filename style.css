@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300&display=swap');
 /* 
    http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -83,12 +84,13 @@ footer {
 .js h2 {
     text-align: center;
     display: block;
+    cursor: pointer;
 }
 
 html,
 body {
     font-size: 16px;
-    font-family: 'MuseoSansCyrl', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     font-weight: 400;
     color: #000;
     line-height: 1.5;
@@ -132,6 +134,19 @@ p {
     padding: 10px 40px;
     border-radius: 50px;
     border: unset;
+}
+
+form {
+    text-align: center;
+}
+
+.divtext p {
+    margin-left: 5px;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 form input {
@@ -196,7 +211,7 @@ header .logo .siteslogan,
 footer .logo .siteslogan {
     text-align: center;
     font-style: italic;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 300;
 }
 
@@ -468,7 +483,7 @@ h2 {
     position: absolute;
     right: -60px;
     width: 150px;
-    height: 100%;
+    height: 101%;
     top: 0;
     transform: skewX(-17deg);
     background: #e9f1f3;
@@ -546,159 +561,6 @@ h2 {
     margin-bottom: 0;
 }
 
-.question {
-    background: url(/images/question.jpg) no-repeat center;
-    background-size: cover;
-    display: table;
-    padding-top: 1%;
-    padding-bottom: 0.5%;
-}
-
-.question h2 {
-    color: #fff;
-    font-weight: 900;
-    line-height: 1.3;
-}
-
-.question .desc {
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    display: inline-block;
-    font-size: 1.5rem;
-    line-height: 1;
-    padding: 10px;
-    margin-bottom: 15px;
-}
-
-.question .desc p:last-child {
-    margin-bottom: 0;
-}
-
-.question .form {
-    width: 48%;
-}
-
-.question .form .input-group {
-    border: 10px solid #f9d038;
-    padding: 2% 4%;
-    font-size: 1.9rem;
-    font-weight: 700;
-    line-height: 1.2;
-    background: #fff;
-    display: grid;
-    grid-template-columns: 1.4fr 2fr;
-    column-gap: 20px;
-    row-gap: 10px;
-}
-
-.question .form .input-group input,
-.question .form .input-group textarea {
-    font-size: 1.1rem;
-    font-weight: 200;
-    color: #000;
-    padding: 12px 20px;
-    border-radius: 50px;
-    border: 2px solid #d4d8d9;
-    font-style: italic;
-    width: 100%;
-}
-
-.question .form .input-group textarea {
-    grid-column: 2;
-    grid-row-start: 1;
-    grid-row-end: 4;
-    border-radius: 21px;
-}
-
-.question .form .agreement {
-    display: block;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    font-size: 14px;
-    margin: 6px 0;
-    padding: 10px;
-    line-height: 1;
-}
-
-.question .form .agreement input {
-    vertical-align: middle;
-    margin: 0;
-    margin-right: 10px;
-}
-
-.question .form .agreement a {
-    color: inherit;
-}
-
-.question .form .btn {
-    margin: 0 auto;
-    display: block;
-}
-
-.map {
-    position: relative;
-    width: 100%;
-}
-
-.map .map-contacts {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 13%;
-    background: #fff;
-    padding: 2% 4%;
-}
-
-.map .map-contacts h2 {
-    margin: 0;
-    margin-bottom: 35px;
-}
-
-.map .map-contacts p {
-    font-size: 1.15rem;
-    font-weight: 300;
-}
-
-.map .map-contacts p:not(:last-child) {
-    margin-bottom: 25px;
-}
-
-.map .map-contacts p.phones {
-    display: inline-block;
-    text-align: right;
-}
-
-.map .map-contacts p span {
-    font-weight: 500;
-}
-
-#callback {
-    display: none;
-    width: 100%;
-    max-width: 350px;
-}
-
-#callback input:not([type="checkbox"]) {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-#callback input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-#callback label.agreement {
-    font-size: 14px;
-    margin-bottom: 10px;
-    display: block;
-}
-
-#callback input[type="submit"] {
-    width: auto;
-    margin: 0 auto;
-}
-
 .container {
     padding-left: 20px;
     padding-right: 20px;
@@ -707,9 +569,35 @@ h2 {
     display: inline;
 }
 
+.divtext {
+    margin-right: 5px;
+}
+
+.slogan {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    padding: 0px 30px;
+    color: white;
+    background: rgba(1, 1, 1, 0.6);
+    margin-left: 5%;
+    font-size: 2.5rem;
+}
+
 @media (max-width: 980px) {
+    .slogan {
+        top: 25%;
+        font-size: 1.2rem;
+    }
     .items .item .text {
         font-size: 1rem;
+    }
+    .items .item {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .items {
+        display: block;
     }
     .items .item .text:after {
         right: -20px;
@@ -787,5 +675,16 @@ h2 {
         margin-left: auto;
         padding: 1% 1.5%;
         white-space: nowrap;
+    }
+}
+
+@media (max-width: 1280px) {
+    .banner .text span {
+        font-size: 3rem;
+    }
+
+    .items .item .text:after {
+        right: -50px;
+        width: 100px;
     }
 }

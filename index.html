@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -31,18 +31,17 @@
 <body>
     <header class="max-width fixed">
         <div class="logo">
-            <a href="/" class="img"><img src="public/icons/safari-pinned-tab.svg" alt="logo"></a>
+            <a href="/" class="img"><img src="public/img/rds.png" alt="logo"></a>
             <div class="info">
                 <p class="sitename">«РусДорСервис»</p>
-                <p class="siteslogan">- Слоган -</p>
+                <p class="siteslogan">Всё лучшее на дорогах</p>
             </div>
         </div>
         <div class="menu">
             <ul>
                 <li><a href="#products">Мы производим</a></li>
-                <li><a href="#services">Услуги</a></li>
                 <li><a href="#about">О нас</a></li>
-                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="#contacts">Связь</a></li>
             </ul>
         </div>
         <div class="phones">
@@ -52,12 +51,12 @@
         </div>
     </header>
     <main>
-        <div><img src="public/img/main.jpg" class="phoneImg"></div>
-        <div class="text">
-            <span>Организация дорожного<br>движения от проекта<br>до реализации!</span>
+        <div><img src="public/img/main.jpg" class="phoneImg" alt=""></div>
+        <div class="slogan">
+            <span>Организация снабжения<br>предприятий от задумки<br>до работы!</span>
         </div>
         <div class="container">
-            <h2>Мы производим:</h2>
+            <h2 id="products">Мы производим:</h2>
             <div class="items">
                 <div class="item">
                   <div class="text">
@@ -95,7 +94,6 @@
                   </div>
                   <img src="/public/img/items/item_6.png" alt="">
                 </div>
-                <div class="js" id="display1"><h2 onclick="disps()">Больше...</h2></div>
                 <div class="item" id="none">
                   <div class="text">
                     <p class="title">Железнобетонные ограждения</p>
@@ -132,9 +130,10 @@
                   </div>
                   <img src="/public/img/items/item_12.png" alt="">
                 </div>
-                <div id="none1" class="js"><h2 onclick="disps()">Свернуть</h2></div>
             </div>
-            <h2>О компании:</h2>
+            <div class="js" id="display1"><h2 onclick="disps()">Больше...</h2></div>
+            <div id="none1" class="js"><h2 onclick="disps()">Свернуть</h2></div>
+            <h2 id="about">О компании:</h2>
             <div class="divtext">
                 <p>
                     Группа Компаний «РусДорСервис» занимается комплексным снабжением предприятий дорожно-
@@ -153,15 +152,56 @@
                     доставить Ваш заказ в любой город.
                 </p>
             </div>
+            <div id="contacts">
+              <h2>Связь:</h2>
+              <form action="" method="post">
+                <div class="form-group">
+                    <p style="margin: 1px; color: rgb(255, 0, 0);" id="notname">  </p>
+                    <label for="name">Имя Фамилия</label><br>
+                    <input class="form-control" id="name" name="name" placeholder="Иван Сидорович" required="" type="text" value=""><br>
+
+                    <p style="margin: 1px; color: rgb(255, 0, 0);" id="notmail">  </p>
+                    <label for="mail">Эл. Почта</label><br>
+                    <input class="form-control" id="mail" name="mail" placeholder="example@example.com" required="" type="mail" value=""><br>
+
+                    <p style="margin: 1px; color: rgb(255, 0, 0);" id="notmsg">  </p>
+                    <label for="msg">Сообщение</label><br>
+                    <input class="form-control" id="msg" name="msg" placeholder="Ваше сообщение" required="" style="height: 70px;" type="text" value=""><br>
+                </div>
+                <br>
+                <p style="margin: 1px; color: rgb(255, 0, 0);" id="notname">  </p>
+                <input class="btn btn-primary" id="submit" name="submit" type="button" value="Отправить заявку">
+                <br>
+                <br>
+            </form>
+          </div>
         </div>
     </main>
     <footer>
-        <div class="divimg"><img src="public/img/rds.png"></div>
+        <div class="divimg">
+          <img src="https://avatars.githubusercontent.com/u/63463168?s=400&u=160c579bd76061a37226f8f1f9f38b7253319973&v=4" alt="@vsecoder - dev" style="display: none;">
+        </div>
+        <div class="divtext">
+          <small>&copy; Copyright 2021, «РусДорСервис»</small>
+        </div>
     </footer>
     <script>
         let non = document.querySelectorAll('#none');
         let on = document.querySelector('#display1');
         let off = document.querySelector('#none1');
+        let sub = document.querySelector('#submit');
+
+        sub.onclick = function() {
+          if (name.value == '' ||
+              mail.value == '' ||
+              name.msg == '' ||
+              name.submit == '') {
+                alert('Заполните все поля!');
+              }
+          else {
+            alert('Отправлено!');
+          }
+        }
 
         function disps() {
             non.forEach(
