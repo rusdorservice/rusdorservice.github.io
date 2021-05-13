@@ -31,7 +31,7 @@
 <body>
     <header class="max-width fixed">
         <div class="logo">
-            <a href="/" class="img"><img src="public/img/rds.png" alt="logo"></a>
+            <a href="/" class="img"><img loading="lazy" src="public/img/rds.png" alt="logo"></a>
             <div class="info">
                 <p class="sitename">«РусДорСервис»</p>
                 <p class="siteslogan">Всё лучшее на дорогах</p>
@@ -51,7 +51,7 @@
         </div>
     </header>
     <main>
-        <div><img src="public/img/main.jpg" class="phoneImg" alt=""></div>
+        <div><img loading="lazy" src="public/img/main.jpg" class="phoneImg" alt=""></div>
         <div class="slogan">
             <span>Организация снабжения<br>предприятий от задумки<br>до работы!</span>
         </div>
@@ -62,77 +62,77 @@
                   <div class="text">
                     <p class="title">Дорожные и мостовые дорожные ограждения</p>
                   </div>
-                  <img src="/public/img/items/item_1.png" alt="">
+                  <img loading="lazy" src="/public/img/items/item_1.png" alt="">
                 </div>
                 <div class="item">
                   <div class="text">
                     <p class="title">Пешеходные ограждения</p>
                   </div>
-                  <img src="/public/img/items/item_2.png" alt="">
+                  <img loading="lazy" src="/public/img/items/item_2.png" alt="">
                 </div>
                 <div class="item">
                   <div class="text">
                     <p class="title">Дорожные опоры</p>
                   </div>
-                  <img src="/public/img/items/item_3.png" alt="">
+                  <img loading="lazy" src="/public/img/items/item_3.png" alt="">
                 </div>
                 <div class="item">
                   <div class="text">
                     <p class="title">Геосинтетика</p>
                   </div>
-                  <img src="/public/img/items/item_4.png" alt="">
+                  <img loading="lazy" src="/public/img/items/item_4.png" alt="">
                 </div>
                 <div class="item">
                   <div class="text">
                     <p class="title">Габионы и габионные изделия</p>
                   </div>
-                  <img src="/public/img/items/item_5.png" alt="">
+                  <img loading="lazy" src="/public/img/items/item_5.png" alt="">
                 </div>
                 <div class="item">
                   <div class="text">
                     <p class="title">Дорожные ограждения</p>
                   </div>
-                  <img src="/public/img/items/item_6.png" alt="">
+                  <img loading="lazy" src="/public/img/items/item_6.png" alt="">
                 </div>
                 <div class="item" id="none">
                   <div class="text">
                     <p class="title">Железнобетонные ограждения</p>
                   </div>
-                  <img src="/public/img/items/item_7.png" alt="">
+                  <img loading="lazy" src="/public/img/items/item_7.png" alt="">
                 </div>
                 <div class="item" id="none">
                   <div class="text">
                     <p class="title">ЛКМ</p>
                   </div>
-                  <img src="/public/img/items/item_8.png" alt="">
+                  <img loading="lazy" src="/public/img/items/item_8.png" alt="">
                 </div>
                 <div class="item" id="none">
                   <div class="text">
                     <p class="title">Добавки для ЩМА</p>
                   </div>
-                  <img src="/public/img/items/item_9.png" alt="">
+                  <img loading="lazy" src="/public/img/items/item_9.png" alt="">
                 </div>
                 <div class="item" id="none">
                   <div class="text">
                     <p class="title">Люки канализационные и дождеприёмники</p>
                   </div>
-                  <img src="/public/img/items/item_10.png" alt="">
+                  <img loading="lazy" src="/public/img/items/item_10.png" alt="">
                 </div>
                 <div class="item" id="none">
                   <div class="text">
                     <p class="title">Бензо / Электроинструмент</p>
                   </div>
-                  <img src="/public/img/items/item_11.png" alt="">
+                  <img loading="lazy" src="/public/img/items/item_11.png" alt="">
                 </div>
                 <div class="item" id="none">
                   <div class="text">
                     <p class="title">Люки канализационные и дождеприёмники</p>
                   </div>
-                  <img src="/public/img/items/item_12.png" alt="">
+                  <img loading="lazy" src="/public/img/items/item_12.png" alt="">
                 </div>
             </div>
-            <div class="js" id="display1"><h2 onclick="disps()">Больше...</h2></div>
-            <div id="none1" class="js"><h2 onclick="disps()">Свернуть</h2></div>
+            <div class="js" id="display1"><h2 onclick="disps()" class="list-open">Раскрыть </h2></div>
+            <div id="none1" class="js"><h2 onclick="disps()" class="list-close">Свернуть </h2></div>
             <h2 id="about">О компании:</h2>
             <div class="divtext">
                 <p>
@@ -157,15 +157,15 @@
               <form action="" method="post">
                 <div class="form-group">
                     <p style="margin: 1px; color: rgb(255, 0, 0);" id="notname">  </p>
-                    <label for="name">Имя Фамилия</label><br>
+                    <label for="name">Имя Фамилия:</label>
                     <input class="form-control" id="name" name="name" placeholder="Иван Сидорович" required="" type="text" value=""><br>
 
                     <p style="margin: 1px; color: rgb(255, 0, 0);" id="notmail">  </p>
-                    <label for="mail">Эл. Почта</label><br>
+                    <label for="mail">Эл. Почта:</label><br>
                     <input class="form-control" id="mail" name="mail" placeholder="example@example.com" required="" type="mail" value=""><br>
 
                     <p style="margin: 1px; color: rgb(255, 0, 0);" id="notmsg">  </p>
-                    <label for="msg">Сообщение</label><br>
+                    <label for="msg">Сообщение:</label>
                     <input class="form-control" id="msg" name="msg" placeholder="Ваше сообщение" required="" style="height: 70px;" type="text" value=""><br>
                 </div>
                 <br>
@@ -178,11 +178,9 @@
         </div>
     </main>
     <footer>
-        <div class="divimg">
-          <img src="https://avatars.githubusercontent.com/u/63463168?s=400&u=160c579bd76061a37226f8f1f9f38b7253319973&v=4" alt="@vsecoder - dev" style="display: none;">
-        </div>
         <div class="divtext">
           <small>&copy; Copyright 2021, «РусДорСервис»</small>
+          <dev><a href="https://t.me/vsecoder">@vsecoder</a></dev>
         </div>
     </footer>
     <script>
