@@ -131,8 +131,8 @@
                   <img loading="lazy" src="/public/img/items/item_12.png" alt="">
                 </div>
             </div>
-            <div class="js" id="display1"><h2 onclick="disps()" class="list-open">Раскрыть </h2></div>
-            <div id="none1" class="js"><h2 onclick="disps()" class="list-close">Свернуть </h2></div>
+            <div class="js" id="display1"><h2 onclick="openCloseList()" class="list-open">Раскрыть </h2></div>
+            <div id="none1" class="js"><h2 onclick="openCloseList()" class="list-close">Свернуть </h2></div>
             <h2 id="about">О компании:</h2>
             <div class="divtext">
                 <p>
@@ -201,7 +201,7 @@
           }
         }
 
-        function disps() {
+        function openCloseList() {
             non.forEach(
               function(currentValue, currentIndex, listObj) {
                 if (non[currentIndex].id == 'none') {
